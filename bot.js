@@ -30,7 +30,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 
 
 client.on('message', message => {
-if (message.content.startsWith("ban")) {
+if (message.content.startsWith("$ban")) {
     var mention = message.mentions.members.first();
     if(!mention) return message.channel.send("يجب منشن العضو");
 
