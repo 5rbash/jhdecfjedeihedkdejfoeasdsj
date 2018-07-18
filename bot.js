@@ -54,15 +54,6 @@ client.on('ready', () => {
 
 });
 
-
-client.on("message", message => {
-    if (message.content === (prefix + "help")) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-
-
 ('+id ' , 'لعرض معلوماتك') 
 ('+server' , 'لمعلومات سيرفر') 
 ('رابط السيرفر الي تكتب الاوامر بيه' ,' رابط  ')
