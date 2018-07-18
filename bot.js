@@ -222,6 +222,8 @@ if (message.content.startsWith("$ban")) {
   
 };
 });
+client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
+
 
 
 
