@@ -1,36 +1,4 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const prefix = '.'
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`on 15 servers | help+ | 5rbash bot#6984 .`,'https://www.twitch.tv/v5bz');
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
-});
-
-
-
-const Discord = require('discord.js');
 const bot = new Discord.Client();
 const client = new Discord.Client();
 const prefix = '+'
@@ -53,6 +21,15 @@ client.on('ready', () => {
      client.user.setActivity("+help",{type: 'WATCHING'})
 
 });
+
+
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+
 
 ('+id ' , 'لعرض معلوماتك') 
 ('+server' , 'لمعلومات سيرفر') 
@@ -3625,5 +3602,3 @@ client.on('message', msg => {
 });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjDfgw.9O4-9SxAhslahyEBSYbWxFNU11k");
-
-client.login(process.env.BOT_TOKEN);
