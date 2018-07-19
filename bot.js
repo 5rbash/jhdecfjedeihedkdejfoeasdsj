@@ -36,7 +36,6 @@ if (message.content === '$help') {
   message.author.sendEmbed(embed);
     }
 });
-
 client.on('message', message => {
   if(message.content === ('clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
