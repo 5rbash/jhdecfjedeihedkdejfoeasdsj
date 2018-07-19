@@ -227,12 +227,33 @@ client.on('message', message => {
    }
 });
 
-client.on("message", async message => {
-if (message.content.startsWith(prefix + '$cat')) {
-get("https://random.cat/meow").then(cat => {
-var embed = new Discord.RichEmbed()
-.setImage(cat.body.file)
-message.channel.send({embed})
-})};});
+const arraySort = require('array-sort'),
+      table = require('table');
+
+client.on('message' , async (message) => {
+
+    if(message.content.startsWith(prefix + "$دعوات")) {
+
+  let invites = await message.guild.fetchInvites();
+
+    invites = invites.array();
+
+    arraySort(invites, 'uses', { reverse: true });
+
+    let possibleInvites = [['User Invited', 'Uses']];
+    invites.forEach(i => {
+      possibleInvites.push([i.inviter.username , i.uses]);
+    })
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setTitle("دعوات السيرفر")
+    .addField('المتصدرين' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
+    .addField('**شكرا لدعمكم المتواصل للسيرفر ♥**')
+    .setFooter('sk Bot', 'https://c.top4top.net/p_831fzcx71.png')
+    .setThumbnail(message.author.avatarURL)
+
+    message.channel.send(embed)
+    }
+});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
