@@ -26,7 +26,6 @@ client.on('ready', () => {
   console.log('╚[════════════]╝')
   console.log('')
   console.log('')
-
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
