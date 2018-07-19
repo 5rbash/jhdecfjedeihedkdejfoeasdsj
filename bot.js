@@ -282,13 +282,13 @@ const secreT = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("خواطر")) {
+   if (message.content.startsWith("$خواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
 
    .setThumbnail(message.author.avatarURL) 
- .addField('$لعبه خواطر' ,
+ .addField('لعبه خواطر' ,
   `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
