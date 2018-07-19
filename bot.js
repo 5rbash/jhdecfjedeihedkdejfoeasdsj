@@ -67,7 +67,7 @@ client.on('message', message => {
 client.on('message', msg => {
   if (msg.content === '$invite') {
     msg.reply('مبرمج البوت
-^     ☤ ˹ خــربآش ˼#9976
+     ☤ ˹ خــربآش ˼#9976
 
 معلومات البوت : 
 https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot لاضافة البوت الى سيرفرك                                        
@@ -77,7 +77,6 @@ https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permiss
 هذا البوت مساعد لبعض السيرفرات
 
  For Help | $help |**`)
-    }');
   }
 });
 
