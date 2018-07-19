@@ -21,11 +21,11 @@ client.on('message', msg => {
 });
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
-                .addField("..")
-                .addField("..")
+                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
+                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
                 .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
-                .addField("...`")
+                .addField("**ِAVATAR**" ,"**الاستخدام:** ``$avatar``")
                 .addField("**INFO**", "**الأستخدام :** ``$info``")
                 .addField("**SAY**" ,"**الاستخدام:** ``$say <الرساله>``")
                 .addField("**ID**" ,"**ال��ستخدام:** ``$id``")
@@ -61,17 +61,15 @@ client.on('message', message => {
     if(message.content.includes('discord.gg')){
       if(!message.member.hasPermission('ADMINISTRATOR'))
         message.delete()
-    return message.reply(`*..*`)
+    return message.reply(`** No Invite Links :angry: ! **`)
     }
 });
-
 client.on('message', msg => {
-  if (msg.content === '$invite') {
-    msg.reply('client.on('message', msg => {
   if (msg.content === '$invite') {
     msg.reply('link');
   }
 });
+
 
 client.on('message', message => {
 if (message.content.startsWith("$kick")) {
