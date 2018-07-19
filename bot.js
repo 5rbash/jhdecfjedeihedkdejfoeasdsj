@@ -198,5 +198,5 @@ if (message.content.startsWith("$ban")) {
   
 };
 });
-client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
+client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjHY-Q.0hB0xiW28VlBpYxzLfxNnHQhXvc");
 client.login(process.env.BOT_TOKEN);
