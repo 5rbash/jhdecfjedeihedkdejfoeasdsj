@@ -14,7 +14,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 
-client.on('message', msg => {
+lient.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
@@ -30,7 +30,7 @@ if (message.content === '$help') {
                 .addField("**CLEAR**" ,"**لمسح الشات** ``$clear <العدد>``")
                 .addField("**PING**", "**لعرض سرعة النت** ``$ping``")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
-				                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
+                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -57,9 +57,11 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '$invite') {
-    msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot');
+    msg.reply('link');
   }
 });
+
+
 client.on('message', message => {
 if (message.content.startsWith("$kick")) {
         if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply('⚠ ماعندك الصلاحيات');
@@ -98,27 +100,18 @@ client.on("message", message => {
         }
       }}).then(msg => {msg.delete(3000)});
                           }
+
+     
 });
 // Your Avatar URL!
 client.on('message', message => {
-    if (message.content.startsWith("$avatar")) {
-        var mentionned = message.mentions.users.first();
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      } else {
-          var x5bzm = message.author;
-          
-      }
-        const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setImage(`${x5bzm.avatarURL}`)
-      message.channel.sendEmbed(embed);
+    if (message.content === "$Avatar") {
+    message.reply(message.author.avatarURL); 
     }
 });
 client.on('message', msg => {
   if (msg.content === '$suppport') {
-    msg.reply('السيرفر للمساعده,https://discord.gg/S62k4g2');
+    msg.reply('السيرفر للمساعده,https://discord.gg/ewCq8jt');
   }
 });
 client.on("message", message => {
@@ -157,7 +150,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "$say") {
+  if (command == "say") {
    message.channel.sendMessage(args.join("  "))
   }
 });
@@ -188,5 +181,5 @@ if (message.content.startsWith("$ban")) {
    ("تم أعطاءالباند بنجاح "    );
   
 };
-
+});
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
