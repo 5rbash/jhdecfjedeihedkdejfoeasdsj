@@ -195,7 +195,7 @@ if (message.content.startsWith("$ban")) {
 });
 
 client.on('message', message => {
-if(message.content.startsWith(prefix +'sug')) {
+if(message.content.startsWith(prefix +'$a8tra7')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
       const A8tra7Room = message.guild.channels.find("name", "اسم الروم")
       if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`);
