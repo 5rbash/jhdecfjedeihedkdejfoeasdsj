@@ -305,6 +305,5 @@ var rebel = ["https://media.giphy.com/media/pjk3wZcciRENa/giphy.gif","http://78.
 message.channel.sendEmbed(cat);
     }
 });
-});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
