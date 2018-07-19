@@ -238,7 +238,7 @@ client.on('message' , async (message) => {
         'هلا',
         'كيفك',
         '?',
-        'جرب *help'
+        'جرب $help'
     ]
     
     // Fetch a random item from the array
