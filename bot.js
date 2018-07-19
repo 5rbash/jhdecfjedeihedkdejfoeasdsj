@@ -248,21 +248,22 @@ client.on('message' , async (message) => {
   
 });
 
-const superagent = require('superagent');
-
-client.on('message' , async (message) => {
-       if(message.content.startsWith(prefix + "$meme")) {
-
-  let{body} = await superagent
-  .get(`https://api-to.get-a.life/meme`);
-
-  let me = new Discord.RichEmbed()
-  .setColor("#7289DA")
-  .setTitle(".-,")
-  .setImage(body.url);
-
-  message.channel.send(me);
+client.on('message', message => {
+            if (message.content.startsWith("$قوانين")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **اولا** ' ,' **ممنوع السب** ')
+.addField('     **ثانيا** ' ,' **لا تسوي سبام ** ')
+.addField('     **ثالثا** ' ,' **لا تزعج الاخرين** ')
+.addField('    **رابعا**' ,' **ممنوع الاعلانات** ')
+.addField('    **خامسا**' ,' **احترم الاخرين** ')
+.addField('    **سادسا**' ,' **لا تنشر في الشات او بل خاص** ')
+.addField('    **سابعا**' ,' **لا تنشر روابط!** ')
+.addField('    **ثامنا**' ,' **لا تسوي سبام ايموجي** ')
+.addField('    **تاسعا**' ,' **لا تطلب رتبه الاداره !** ')
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
     }
-    });
+});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
