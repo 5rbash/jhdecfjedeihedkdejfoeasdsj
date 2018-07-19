@@ -227,15 +227,4 @@ client.on('message', message => {
    }
 });
 
-var iLieayb = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-///by !! ʟʜꜱ | iLieayb_#8174
-    if(message.content.startsWith(prefix + 'لو خيروك')) {
-         var cat = new Discord.RichEmbed()
-.setImage(iLieayb[Math.floor(Math.random() * iLieayb.length)])
-message.channel.sendEmbed(cat);
-    }
-});
-
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
