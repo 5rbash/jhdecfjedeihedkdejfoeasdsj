@@ -21,8 +21,6 @@ client.on('message', msg => {
 });
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
-                .addField("**BAN**" ,"بوت جديد , يعمل على تحديثات يوميه,لديك اي اقتراح راسل المبرمج, ☤ ˹ خــربآش ˼#9976
-``")
                 .addField("**BAN**" ,"**امر الباند** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**امر الكيك** ``$kick <المستخدم> ``")
                 .addField("**ِAVATAR**" ,"**امر رؤية حساب شخص او حسابك** ``$avatar``")
