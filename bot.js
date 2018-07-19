@@ -133,8 +133,6 @@ client.on("message", message => {
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
   .addField("تاريخ التسجيل", message.author.createdAt)
-.addField(':تاريخ انضمامك لسيرفرنا  ', `${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')} \n \`${moment(h.joinedAt).fromNow()}\``, true)
-
      
      
   message.channel.sendEmbed(embed);
