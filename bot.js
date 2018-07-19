@@ -21,6 +21,7 @@ client.on('message', msg => {
 });
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
+                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
                 .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
                 .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
