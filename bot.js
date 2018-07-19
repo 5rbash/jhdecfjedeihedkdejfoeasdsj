@@ -98,8 +98,6 @@ client.on("message", message => {
         }
       }}).then(msg => {msg.delete(3000)});
                           }
-
-     
 });
 // Your Avatar URL!
 client.on('message', message => {
