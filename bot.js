@@ -21,25 +21,18 @@ client.on('message', msg => {
 });
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
-                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
                 .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
                 .addField("**ِAVATAR**" ,"**الاستخدام:** ``$avatar``")
-                .addField("**INFO**", "**الأستخدام :** ``$info``")
-                .addField("**SAY**" ,"**الاستخدام:** ``$say <الرساله>``")
                 .addField("**ID**" ,"**ال��ستخدام:** ``$id``")
-                .addField("**SERVER**" ,"**الاستخدام:** ``$server``")
                 .addField("**INVITE**" ,"**الاستخدام:** ``$invite <لأضافه البوت لأى سيرفر>``")
                 .addField("**SUPPORT**" ,"**الاستخدام:** ``$suppport <سيرفر دعم الفنى>``")
-                .addField("**QA**" ,"**الاستخدام:** ``$qa <السؤال>``  ")
                 .addField("**CLEAR**" ,"**الاستخدام:** ``$clear <العدد>``")
                 .addField("**PING**", "**الأستخدام:** ``$ping``")
                 .addField("**SERVERNAME**", "**الأستخدام:** ``$servername``")
                 .addField("**CUT_TWEET**", "**الاستخدام** ``$ct``")
-                .addField("**TWEET**", "**الاستخدام** ``$tweet <الرساله>``")
-                .addField("**NO INVITE LINKE**","تم اضافة خاصية منع الانفيتات ")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
+                .addField("**SUPPORT**" ,"**الاستخدام:** ``$suppport <سيرفر دعم الفنى>``")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -114,8 +107,19 @@ client.on("message", message => {
 });
 // Your Avatar URL!
 client.on('message', message => {
-    if (message.content === "$Avatar") {
-    message.reply(message.author.avatarURL); 
+    if (message.content.startsWith("$avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
     }
 });
 client.on('message', msg => {
@@ -159,7 +163,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "say") {
+  if (command == "$say") {
    message.channel.sendMessage(args.join("  "))
   }
 });
