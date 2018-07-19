@@ -18,24 +18,40 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
+client.on("message", message => {
+  if (message.content === "$help") {
+   const embed = new Discord.RichEmbed()
+       .setColor('RANDOM')
+       .setFooter('By 5rbash')
+       .setThumbnail(message.author.avatarURL)
+       .setDescription(`
+
+   **✨Administrationr Commands | اوامر الاداره✨**
+ $ban    | لحظر عضو
+ $kick   | لإخراج عضو من السيرفر
+ $mute   |  لإسكات عضو
+ $unmute | لإلغاء الاإسكات عن عضو
+ $bc     | لإرسال رسالة لمستخدمي البوت
+ $clear  | لمسح اشات
+ **✨Common Commands | الاوامر العامة ✨**
+ $help   | لإظهار هذه الرسالة
+ $invite | لإضافة البوت
+ $suppport | للتبليغ عن اي احد يقوم بالإزعاج
+$ping | امر سرعة استاجبة البوت 
+ $id     | لإظهار معلومات حسابك العامة
+ $bot    | لإظهار معلومات البوت
+ $tag    |  لكتابة الكلام بطريقة مميزة
+ **✨Games Commands  | اوامر الالعاب✨**
+ $فكك    
+ $اسالني
+ $ايموجي
+ $عقاب
+  Soon More Will be added
+ `)
+ message.author.send(embed);
+}  
 });
-if (message.content === '$help') {
-              var embed  = new Discord.RichEmbed()
-                .addField("**BAN**" ,"**امر الباند** ``$ban <المستخدم>``")
-                .addField("**KICK**" ,"**امر الكيك** ``$kick <المستخدم> ``")
-                .addField("**ِAVATAR**" ,"**امر رؤية حساب شخص او حسابك** ``$avatar``")
-                .addField("**ID**" ,"**امر معلومات عن حسابك ** ``$id``")
-                .addField("**INVITE**" ," ``$invite <لأضافه البوت لأى سيرفر>``")
-                .addField("**CLEAR**" ,"**امر مسح الشات:** ``$clear <العدد>``")
-                .addField("**PING**", "**امر سرعة استجابةالبوت:** ``$ping``")
-                .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
-                .addField("**SUPPORT**" ,"``$suppport <سيرفر دعم الفنى>``")
-                .addField("**PING**", "** موقع البوت:** ``https://sites.google.com/view/bot5rbash/home``")
-                .setColor('RANDOM')
-.setColor('RANDOM')
-  message.author.sendEmbed(embed);
-    }
-});
+
 client.on('message', message => {
   if(message.content === ('clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
@@ -122,7 +138,7 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '$suppport') {
-    msg.reply('السيرفر للمساعده,https://discord.gg/ewCq8jt');
+    msg.reply('السيرفر للمساعده,https://discord.gg/S62k4g2');
   }
 });
 client.on("message", message => {
@@ -199,7 +215,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "$mute") {
+  if (command === "#mute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mod-log');
