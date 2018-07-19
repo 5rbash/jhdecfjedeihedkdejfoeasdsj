@@ -18,38 +18,23 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
-client.on("message", message => {
-  if (message.content === "$help") {
-   const embed = new Discord.RichEmbed()
-       .setColor('RANDOM')
-       .setFooter('By 5rbash')
-       .setThumbnail(message.author.avatarURL)
-       .setDescription(`
-
-   **✨Administrationr Commands | اوامر الاداره✨**
- $ban    | لحظر عضو
- $kick   | لإخراج عضو من السيرفر
- $mute   |  لإسكات عضو
- $unmute | لإلغاء الاإسكات عن عضو
- $bc     | لإرسال رسالة لمستخدمي البوت
- $clear  | لمسح اشات
- **✨Common Commands | الاوامر العامة ✨**
- $help   | لإظهار هذه الرسالة
- $invite | لإضافة البوت
- $suppport | للتبليغ عن اي احد يقوم بالإزعاج
-$ping | امر سرعة استاجبة البوت 
- $id     | لإظهار معلومات حسابك العامة
- $bot    | لإظهار معلومات البوت
- $tag    |  لكتابة الكلام بطريقة مميزة
- **✨Games Commands  | اوامر الالعاب✨**
- $فكك    
- $اسالني
- $ايموجي
- $عقاب
-  Soon More Will be added
- `)
- message.author.send(embed);
-}  
+if (message.content === '$help') {
+              var embed  = new Discord.RichEmbed()
+                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
+                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
+                .addField("**BAN**" ," **$ban    | لحظر عضو``")
+                .addField("**KICK**" ,"** $kick   | لإخراج عضو من السيرفر ``")
+                .addField("**ِAVATAR**" ,"**لا اخذ صورة شخص او صورتك:** ``$avatar``")
+                .addField("**ID**" ,"**لعرض معلومات حسابك :** ``$id``")
+                .addField("**INVITE**" ,"** ``$invite <لأضافه البوت لأى سيرفر>``")
+                .addField("**CLEAR**" ,"**لمسح الشات** ``$clear <العدد>``")
+                .addField("**PING**", "**لعرض سرعة النت** ``$ping``")
+                .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
+				                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
+                .setColor('RANDOM')
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
 });
 
 client.on('message', message => {
@@ -210,38 +195,5 @@ if (message.content.startsWith("$ban")) {
 };
 });
 
-client.on("message", message => {
-  if (message.author.bot) return;
-
-  let command = message.content.split(" ")[0];
-
-  if (command === "#mute") {
-        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
-  let user = message.mentions.users.first();
-  let modlog = client.channels.find('name', 'mod-log');
-  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-  if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").catch(console.error);
-  if (message.mentions.users.size < 1) return message.reply('** يجب عليك منشنت شخص اولاً**').catch(console.error);
-
-  const embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .addField('الأستعمال:', 'اسكت/تكلم')
-    .addField('تم ميوت:', `${user.username}!${user.discriminator} (${user.id})`)
-    .addField('بواسطة:', `${message.author.username}!${message.author.discriminator}`)
-
-   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('** لا يوجد لدي برمشن Manage Roles **').catch(console.error);
-
-  if (message.guild.member(user).roles.has(muteRole.id)) {
-return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت**").catch(console.error);
-} else {
-    message.guild.member(user).addRole(muteRole).then(() => {
-return message.reply("**:white_check_mark: .. تم اعطاء العضو ميوت كتابي**").catch(console.error);
-});
-  }
-
-};
-
-});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
