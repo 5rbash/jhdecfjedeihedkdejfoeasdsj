@@ -227,32 +227,30 @@ client.on('message', message => {
    }
 });
 
-const arraySort = require('array-sort'),
-      table = require('table');
+client.on('message', function(message) {
+                  if(!message.channel.guild) return;
+    if(message.content ===  's!setcolors 200') {
+        if(message.member.hasPermission('MANAGE_ROLES')) {
+            setInterval(function(){})
+            message.channel.send('جاري عمل الالوان يرجى الانتظار لمدة دقيقة |✅')
+        }else{
+            message.channel.send('ما معاك البرمشن المطلوب  |❌')
+            }
+    }
+});
 
-client.on('message' , async (message) => {
-
-    if(message.content.startsWith(prefix + "$دعوات")) {
-
-  let invites = await message.guild.fetchInvites();
-
-    invites = invites.array();
-
-    arraySort(invites, 'uses', { reverse: true });
-
-    let possibleInvites = [['User Invited', 'Uses']];
-    invites.forEach(i => {
-      possibleInvites.push([i.inviter.username , i.uses]);
-    })
-    const embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setTitle("دعوات السيرفر")
-    .addField('المتصدرين' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
-    .addField('**شكرا لدعمكم المتواصل للسيرفر ♥**')
-    .setFooter('sk Bot', 'https://c.top4top.net/p_831fzcx71.png')
-    .setThumbnail(message.author.avatarURL)
-
-    message.channel.send(embed)
+client.on('message', message=>{
+    if (message.content ===  's!setcolors 200'){
+              if(!message.channel.guild) return;
+            if (message.member.hasPermission('MANAGE_ROLES')){
+                setInterval(function(){})
+                  let count = 0;
+                  let ecount = 0;
+        for(let x = 1; x < 201; x++){
+            message.guild.createRole({name:x,
+            color: 'RANDOM'})
+            }
+            }
     }
 });
 
