@@ -295,15 +295,20 @@ const secreT = [
     }
 });
 
-  var prefix = "*";
-var rebel = ["https://media.giphy.com/media/pjk3wZcciRENa/giphy.gif","http://78.media.tumblr.com/fd4383e21495f2bb10ed699cd73f22ca/tumblr_n5l0pk3w4E1so8ds0o1_500.gif","https://media1.giphy.com/media/14309XrKEC7yyk/giphy.gif","http://gifimage.net/wp-content/uploads/2017/06/anime-gif-13-1.gif","https://i.imgur.com/M3BG3Ck.gif","https://4.bp.blogspot.com/-yDd1fLFMKts/WeX_LrmWhwI/AAAAAAAALsU/mLO7KCD0DFMp8n8xbdMdJNR5V2D0D9WXwCLcBGAs/s1600/tenor.gif","https://secure.static.tumblr.com/940bbaba171f6b2f2dabd11c17fd3f20/kj1pjcr/jxWok11nj/tumblr_static_filename_640_v2.gif","https://data.whicdn.com/images/110768190/original.gif","http://78.media.tumblr.com/80f12fdc314760b2ba3e10204e33323d/tumblr_nc1n9weNg11tk3dxfo1_500.gif","https://78.media.tumblr.com/ec3f0546a20a75cd47c00e95ef0ba0a7/tumblr_o3oyhk49JC1u6348eo1_500.gif","https://thumbs.gfycat.com/MassiveUnlinedDarwinsfox-max-1mb.gif","https://data.whicdn.com/images/120798528/original.gif","https://i.gifer.com/NZcE.gif","https://media.giphy.com/media/2aH3YUqjx92cE/giphy.gif","https://78.media.tumblr.com/99fcbe4544d83d27babb216a3f3bb8a3/tumblr_n1shx2AC2e1qztgoio3_500.gif","https://data.whicdn.com/images/81429641/original.gif","https://78.media.tumblr.com/6eace49891b549d558f3d1a2c0ad3c98/tumblr_n4xmoqCrPj1spu161o8_500.gif","https://pa1.narvii.com/6088/b868bd47eb802373aa8b8203f76b07dd04846d1f_hq.gif","https://cdn.discordapp.com/attachments/458384513173684224/460742842503921669/Tumblr_mdi9s0YkbA1rao0vlo1_500.gif","https://cdn.discordapp.com/attachments/458384513173684224/460742882064728065/Chuunibyou-Demo-Koi-Ga-Shitai-6.gif"]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + '$انمي')) {
-         var cat = new Discord.RichEmbed()
-.setImage(rebel[Math.floor(Math.random() * rebel.length)])
-message.channel.sendEmbed(cat);
-    }
-});
+  const Sra7a = [  ' يا صرخة إحساسي وخنقة دموعي إذا الصّدف جابت مكاني مكانه من داخلي إحساس يعلن خضوعي وفي ظاهري رجال حافظ كيانه',  ' ظامي الوجدان وأشواقك نهر اسقني من عذب معسول الغدير الرّموش السّود والطّرف الحور ليتها عن لحظها لي تستخير أول المشوار في حبّك قهر وآخر المشوار عمري به خطير',  ' حبيبي عادت أسراب الحمام وعادوا الغيّاب وأنا من كثر ما شفت الوجيه اشتقت لأحبابي حبيبي من كثر ما اشتقت لك صرت أكره الأبواب ليّا شفت الوصل، وأهل الوصل ما عتّبوا بابي',  ' أي سرّ يعتري شوقي إليك إنّ شوقي حائر في مقلتيك كلّنا أسرى صبابات الهوى فادنُ منّي إنّني ملك يديك',  ' إِن الغرورَ إِذا تملَّكَ أمّةً كالزّهرِ يخفي الموتَ وهو زؤامُ',  ' إِذا عصفَ الغرورُ برأسِ غِرٍّ توّهمَ أن منكبَهُ جَناحُ',  ' أيّهذا الشّاكي و ما بك داء كن جميلاً ترى الوجود جميلا',  ' في هذه البقاع القصيّة هذه البقاع المهجورة حتى من عواء الذئب أسرجُ ضوء الشّمعة وأسافر',  ' يا نفسُ صَبْراً على ما قد مَنّيتِ به فالحرُّ يصبرُ عند الحادثِ الجَلَلِ',  ' وحسبُ الفتى إِن لمْ ينلْ ما يريدُه مع الصّبرِ أن يُلفى مقيماً على الصّبر',  '‏ صَبْراً جميلاً على مانابَ من حَدَثٍ والصبرُ ينفعُ أحياناً إِذا صبروا الصّبرُ أفضلُ شيءٍ تستعينُ به على الزّمانِ إِذا ما مسَّكَ الضّررُ',]
+client.on('message', message => {
+if (message.content.startsWith('$شعر')) {
+  if(!message.channel.guild) return message.reply('** This command only for servers **');
+var client= new Discord.RichEmbed()
+.setTitle("شعر..")
+.setColor('#FF0000')
+.setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
+.setImage("https://cdn.discordapp.com/attachments/442659848019116032/443844544308576266/unknown.png")
+               .setTimestamp()
+        console.log("By : |5rbash);
+message.channel.sendEmbed(client);
+message.react("??")
+}
+}); 
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
