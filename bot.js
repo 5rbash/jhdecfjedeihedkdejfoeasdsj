@@ -19,6 +19,7 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
+
 lient.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
