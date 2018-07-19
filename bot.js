@@ -61,8 +61,6 @@ client.on('message', msg => {
     msg.reply('https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot');
   }
 });
-
-
 client.on('message', message => {
 if (message.content.startsWith("$kick")) {
         if(!message.member.hasPermission('KICK_MEMBERS')) return message.reply('⚠ ماعندك الصلاحيات');
