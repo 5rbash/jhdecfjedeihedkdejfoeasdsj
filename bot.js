@@ -122,7 +122,8 @@ client.on("message", message => {
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
   message.channel.sendEmbed(embed);
     }
-});    client.on('message', message => {
+});    
+    client.on('message', message => {
      if (message.content === "$id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
