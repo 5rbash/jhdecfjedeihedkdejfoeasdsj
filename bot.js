@@ -194,7 +194,7 @@ const cuttweet = [
     'كت تويت | موقف مميز فعلته مع شخص ولا يزال يذكره لك؟',
     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',
     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',
-    'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عل��ك؟',
+    'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',
     '‏كت تويت | عمرك شلت مصيبة عن شخص برغبتك ؟',
     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',
     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',
@@ -205,12 +205,12 @@ const cuttweet = [
     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',
     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',
     '‏كت تويت |أقوى كذبة مشت عليك ؟',
-    '‏كت تو��ت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',
+    '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',
     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',
     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',
-    '���كت ��ويت | ‏اكثر شي يرضيك ��ذا زعلت بدون تفكير ؟',
-    '‏كت تويت | وش محتاج عشان تكون مبسو�� ؟',
-    '‏كت ت��يت | مطلبك الوحيد الحين ؟',
+    'كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',
+    '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',
+    '‏كت تويت | مطلبك الوحيد الحين ؟',
     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',
 ]
 
@@ -225,33 +225,6 @@ client.on('message', message => {
  message.channel.sendEmbed(embed);
  console.log('[id] Send By: ' + message.author.username)
    }
-});
-
-client.on('message', function(message) {
-                  if(!message.channel.guild) return;
-    if(message.content ===  's!setcolors 200') {
-        if(message.member.hasPermission('MANAGE_ROLES')) {
-            setInterval(function(){})
-            message.channel.send('جاري عمل الالوان يرجى الانتظار لمدة دقيقة |✅')
-        }else{
-            message.channel.send('ما معاك البرمشن المطلوب  |❌')
-            }
-    }
-});
-
-  client.on('message', message => {
-if (message.content.startsWith('$صراحة')) {
-    if(!message.channel.guild) return message.reply('** This command only for servers **');
- var client= new Discord.RichEmbed()
- .setTitle("لعبة صراحة ..")
- .setColor('RANDOM')
- .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
- .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
-                 .setTimestamp()
-
-  message.channel.sendEmbed(client);
-  message.react("??")
-}
 });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
