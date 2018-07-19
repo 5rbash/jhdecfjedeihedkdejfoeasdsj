@@ -21,11 +21,11 @@ client.on('message', msg => {
 });
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
-                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
+                .addField("..")
+                .addField("..")
                 .addField("**BAN**" ,"**الاستخدام:** ``$ban <المستخدم>``")
                 .addField("**KICK**" ,"**الاستخدام:** ``$kick <المستخدم> ``")
-                .addField("**ِAVATAR**" ,"**الاستخدام:** ``$avatar``")
+                .addField("...`")
                 .addField("**INFO**", "**الأستخدام :** ``$info``")
                 .addField("**SAY**" ,"**الاستخدام:** ``$say <الرساله>``")
                 .addField("**ID**" ,"**ال��ستخدام:** ``$id``")
@@ -61,7 +61,17 @@ client.on('message', message => {
     if(message.content.includes('discord.gg')){
       if(!message.member.hasPermission('ADMINISTRATOR'))
         message.delete()
-    return message.reply(`** No Invite Links :angry: ! **`)
+    return message.reply(`**مبرمج البوت
+^     ☤ ˹ خــربآش ˼#9976
+
+معلومات البوت : 
+https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot لاضافة البوت الى سيرفرك                                        
+
+5arbash تم برمجة البوت من قبل .
+
+هذا البوت مساعد لبعض السيرفرات
+
+ For Help | $help |**`)
     }
 });
 client.on('message', msg => {
