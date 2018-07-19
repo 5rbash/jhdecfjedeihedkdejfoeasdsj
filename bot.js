@@ -248,4 +248,21 @@ client.on('message' , async (message) => {
   
 });
 
+const superagent = require('superagent');
+
+client.on('message' , async (message) => {
+       if(message.content.startsWith(prefix + "$meme")) {
+
+  let{body} = await superagent
+  .get(`https://api-to.get-a.life/meme`);
+
+  let me = new Discord.RichEmbed()
+  .setColor("#7289DA")
+  .setTitle(".-,")
+  .setImage(body.url);
+
+  message.channel.send(me);
+    }
+    });
+
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
