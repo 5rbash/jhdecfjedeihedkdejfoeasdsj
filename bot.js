@@ -312,33 +312,19 @@ message.react("??")
 }); 
 
 client.on('message', message => {
-     if(message.content.startsWith(prefix + "$bc")) {
- let args = message.content.split(" ").slice(1);
-
-    var user = message.mentions.users.first();
-    var reason = args.slice(1).join(' ');
-    const embed = new Discord.RichEmbed()
-        .setColor(0xFFB200)
-        .setTimestamp();
-
-    if (!user) {
-        embed.addField("DM A Person", `Who are you going to DM ${message.author.tag}?`)
-            .setFooter(`lol why did i add dis again?`);
-        return message.channel.send({embed});
-    } if (!reason) {
-        embed.addField("DM A Person", `What are you going to say to ${user.tag}?`)
-        return message.channel.send({embed});
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('discord.gg/')){
+        message.delete()
+    return message.reply(`**يمنع نشر روابط الدسكورد في السيرفر هنا **`)
     }
-    embed.addField("DM A Person", `Successfully sent a DM to ${user.tag}!`)
-        .setFooter(`lol.`);
-    message.channel.send({embed});
-    const embed1 = new Discord.RichEmbed()
-        .setColor(0xFFB200)
-        .setTimestamp()
-        .addField("You have received mail! :mailbox_with_mail:", `**${reason}**`)
-        .setFooter(`Sent by ${message.author.tag}.`);
-    user.send({embed: embed1});
-}
+});
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('youtube.com/')){
+        message.delete()
+    return message.reply(`**يمنع نشر روابط اليوتيوب هنا **`)
+    }
 });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
