@@ -133,6 +133,8 @@ client.on("message", message => {
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
+  .addField("الرقـــم الشـــخصي", message.author.id)
+  .addField('بــــوت', message.author.bot)
   .addField("تاريخ التسجيل", message.author.createdAt)
      
      
