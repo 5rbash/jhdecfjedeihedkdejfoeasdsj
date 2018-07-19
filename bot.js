@@ -18,6 +18,8 @@ lient.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
+});
+
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
