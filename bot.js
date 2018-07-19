@@ -33,7 +33,7 @@ if (message.content === '$help') {
                 .addField("**CUT_TWEET**", "**الاستخدام** ``$ct``")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
                 .addField("**SUPPORT**" ,"**الاستخدام:** ``$suppport <سيرفر دعم الفنى>``")
-                .addField("**PING**", "**تم عمل موقع للبوت:** ``https://sites.google.com/view/bot5rbash/home``")
+                .addField("**PING**", "** موقع البوت:** ``https://sites.google.com/view/bot5rbash/home``")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
