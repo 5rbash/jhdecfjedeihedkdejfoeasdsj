@@ -6,6 +6,7 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('---------------')
 });
+
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
@@ -35,7 +36,7 @@ if (message.content === '$help') {
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
-});
+
 client.on('message', message => {
   if(message.content === ('clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
