@@ -239,19 +239,19 @@ client.on('message', function(message) {
     }
 });
 
-client.on('message', message=>{
-    if (message.content ===  's!setcolors 200'){
-              if(!message.channel.guild) return;
-            if (message.member.hasPermission('MANAGE_ROLES')){
-                setInterval(function(){})
-                  let count = 0;
-                  let ecount = 0;
-        for(let x = 1; x < 201; x++){
-            message.guild.createRole({name:x,
-            color: 'RANDOM'})
-            }
-            }
-    }
+  client.on('message', message => {
+if (message.content.startsWith('$صراحة')) {
+    if(!message.channel.guild) return message.reply('** This command only for servers **');
+ var client= new Discord.RichEmbed()
+ .setTitle("لعبة صراحة ..")
+ .setColor('RANDOM')
+ .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
+ .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
+                 .setTimestamp()
+
+  message.channel.sendEmbed(client);
+  message.react("??")
+}
 });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
