@@ -14,11 +14,10 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 
-client.on('message', msg => {
+lient.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
-});
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
@@ -31,12 +30,13 @@ if (message.content === '$help') {
                 .addField("**CLEAR**" ,"**لمسح الشات** ``$clear <العدد>``")
                 .addField("**PING**", "**لعرض سرعة النت** ``$ping``")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
-				                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
+                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
   if(message.content === ('clear')) {
   let modRole = message.guild.roles.find("name", "Admin");
