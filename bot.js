@@ -189,6 +189,7 @@ if (message.content.startsWith("$ban")) {
   
 };
 });
+
 client.on('message', message => {
   if (message.content == "$اسالني") {
        message.react('🤔','👌')
