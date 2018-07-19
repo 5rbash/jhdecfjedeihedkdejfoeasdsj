@@ -64,12 +64,22 @@ client.on('message', message => {
     return message.reply(`*..*`)
     }
 });
+
 client.on('message', msg => {
   if (msg.content === '$invite') {
-    msg.reply('*link*`)
+    msg.reply('مبرمج البوت
+^     ☤ ˹ خــربآش ˼#9976
+
+معلومات البوت : 
+https://discordapp.com/api/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot لاضافة البوت الى سيرفرك                                        
+
+5arbash تم برمجة البوت من قبل .
+
+هذا البوت مساعد لبعض السيرفرات
+
+ For Help | $help |');
   }
 });
-
 
 client.on('message', message => {
 if (message.content.startsWith("$kick")) {
