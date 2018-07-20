@@ -22,7 +22,8 @@ client.on('message', msg => {
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
+                .addField("**اوامر ايداريه**")
+                .addField("**قوانين**" ," **قوانين$    | لعرض قوانين السيرفر``")
                 .addField("**BAN**" ," **$ban    | لحظر عضو``")
                 .addField("**KICK**" ,"** $kick   | لإخراج عضو من السيرفر ``")
                 .addField("**ِAVATAR**" ,"**لا اخذ صورة شخص او صورتك:** ``$avatar``")
@@ -30,6 +31,10 @@ if (message.content === '$help') {
                 .addField("**INVITE**" ,"** ``$invite <لأضافه البوت لأى سيرفر>``")
                 .addField("**CLEAR**" ,"**لمسح الشات** ``$clear <العدد>``")
                 .addField("**PING**", "**لعرض سرعة النت** ``$ping``")
+                .addField("**اوامر العاب**")
+                .addField("**شعر$**", "**لعرض شعر** ``شعر``")
+                .addField("**خواطر$**", "**لعرض خواطر** ``خواطر``")
+                .addField("**كت تويت$**", "**لعرض كت تويت** ``كت تويت``")
                 .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
 				                .addField("**SUPPORT**" ,"** ``$suppport <سيرفر دعم الفنى>``")
                 .setColor('RANDOM')
@@ -328,3 +333,4 @@ client.on('message', message => {
 });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
+
