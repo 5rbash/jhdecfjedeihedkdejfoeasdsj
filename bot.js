@@ -22,7 +22,7 @@ client.on('message', msg => {
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("**ء**" ," **لعرض اوامر الاداره    | اوامر ايداريه**")
+                .addField("``ء**" ," ``لعرض اوامر الاداره    | اوامر ايداريه**")
                 .addField("**قوانين**" ," **قوانين$    | لعرض قوانين السيرفر**")
                 .addField("**BAN**" ," **$ban    | لحظر عضو**")
                 .addField("**KICK**" ,"** $kick   | لإخراج عضو من السيرفر **")
@@ -31,7 +31,7 @@ if (message.content === '$help') {
                 .addField("**INVITE**" ,"** ``$invite <لأضافه البوت لأى سيرفر>``")
                 .addField("**CLEAR**" ,"**لمسح الشات** ``$clear <العدد>``")
                 .addField("**PING**", "**لعرض سرعة النت** ``$ping``")
-                .addField("__اوامر العاب__")
+                .addField("``ء**" ," ``لعرض اوامر الالعاب    | اوامر الالعاب**")
                 .addField("**شعر$**", "**لعرض شعر** ``شعر``")
                 .addField("**خواطر$**", "**لعرض خواطر** ``خواطر``")
                 .addField("**كت تويت$**", "**لعرض كت تويت** ``كت تويت``")
