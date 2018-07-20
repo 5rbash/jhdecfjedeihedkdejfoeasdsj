@@ -225,7 +225,7 @@ client.on('message', message => {
  var embed = new Discord.RichEmbed()
  .setColor('RANDOM')
   .setThumbnail(message.author.avatarURL) 
-.addField('لعبه كت تويت',
+.addField(' كت تويت',
  `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
  message.channel.sendEmbed(embed);
  console.log('[id] Send By: ' + message.author.username)
@@ -293,7 +293,7 @@ const secreT = [
   .setColor('RANDOM')
 
    .setThumbnail(message.author.avatarURL) 
- .addField('لعبه خواطر' ,
+ .addField(' خواطر' ,
   `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
