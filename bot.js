@@ -237,7 +237,7 @@ client.on('message' , async (message) => {
               
  let responses = [
         'كيف يمكن اساعدك',
-        'مرحبا',
+        ' ًمرحبا',
         'لا تزعجني',
         'ايش تبي ',
         'هلا',
