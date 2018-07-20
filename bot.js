@@ -22,8 +22,7 @@ client.on('message', msg => {
 if (message.content === '$help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("__اوامر ايداريه__")
-
+                .addField("**ء**" ," **لعرض اوامر الاداره    | اوامر ايداريه**")
                 .addField("**قوانين**" ," **قوانين$    | لعرض قوانين السيرفر**")
                 .addField("**BAN**" ," **$ban    | لحظر عضو**")
                 .addField("**KICK**" ,"** $kick   | لإخراج عضو من السيرفر **")
