@@ -63,7 +63,7 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '$invite') {
-    msg.reply('link');
+    msg.reply('https://discordapp.com/oauth2/authorize?client_id=468978551710810112&permissions=0&scope=bot');
   }
 });
 
@@ -156,8 +156,8 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "say") {
-   message.channel.sendMessage(args.join("  "))
+  if (command == "$say") {
+   message.channel.sendMessage(args.join("say"))
   }
 });
 client.on("guildMemberRemove", member => {
