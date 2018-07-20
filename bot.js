@@ -332,4 +332,4 @@ client.on('message', message => {
     }
 });
 
-client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjOd7A.wY9EF8EWp7pxdUTOPcsEbzlwiCc
+client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjOd7A.wY9EF8EWp7pxdUTOPcsEbzlwiCc")
