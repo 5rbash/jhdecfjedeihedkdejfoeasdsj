@@ -332,5 +332,6 @@ client.on('message', message => {
     }
 });
 
-client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjCa_Q.dvqOZsZxab7ztE2h71vRMqb_IBM");
+client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjOd7A.wY9EF8EWp7pxdUTOPcsEbzlwiCc
+");
 
