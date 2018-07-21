@@ -440,7 +440,7 @@ client.on('message', function(message) {
             });
         }
     }
-    else if (mess.startsWith(prefix + 'skip')) {
+    else if (mess.startsWith(prefix + '$skip')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`').then(() => {
             skip_song(message);
@@ -448,7 +448,7 @@ client.on('message', function(message) {
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
         });
     }
-    else if (message.content.startsWith(prefix + 'vol')) {
+    else if (message.content.startsWith(prefix + '$vol')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         // console.log(args)
         if (args > 100) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
@@ -456,19 +456,19 @@ client.on('message', function(message) {
         dispatcher.setVolume(1 * args / 50);
         message.channel.sendMessage(`**__ ${dispatcher.volume*50}% مستوى الصوت __**`);
     }
-    else if (mess.startsWith(prefix + 'pause')) {
+    else if (mess.startsWith(prefix + '$pause')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`').then(() => {
             dispatcher.pause();
         });
     }
-    else if (mess.startsWith(prefix + 'ok')) {
+    else if (mess.startsWith(prefix + '$ok')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
             message.channel.send('`✔`').then(() => {
             dispatcher.resume();
         });
     }
-    else if (mess.startsWith(prefix + 'stop')) {
+    else if (mess.startsWith(prefix + '$stop')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`');
         var server = server = servers[message.guild.id];
@@ -478,7 +478,7 @@ client.on('message', function(message) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.member.voiceChannel.join().then(message.channel.send(':ok:'));
     }
-    else if (mess.startsWith(prefix + 'play')) {
+    else if (mess.startsWith(prefix + '$play')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         if (isPlaying == false) return message.channel.send(':anger: || **__تم التوقيف__**');
         let playing_now_info = new Discord.RichEmbed()
