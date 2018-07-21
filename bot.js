@@ -358,7 +358,7 @@ if (message.content.startsWith(prefix + 'من تحب اكثر')){
 var mariam= new Discord.RichEmbed() 
 .setTitle("لعبة من تحب اكثر ..")
  .setColor('RANDOM') 
- .setDescription(`${kingmas[Math.floor(Math.
+ .setDescription(`{kingmas[Math.floor(Math.
  random() * kingmas.length)]}`)
 .channel.sendEmbed(mariam); message.react("🤔")
  }
