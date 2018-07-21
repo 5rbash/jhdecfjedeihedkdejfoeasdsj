@@ -456,13 +456,13 @@ client.on('message', function(message) {
         dispatcher.setVolume(1 * args / 50);
         message.channel.sendMessage(`**__ ${dispatcher.volume*50}% مستوى الصوت __**`);
     }
-    else if (mess.startsWith(prefix + '$pause')) {
+    else if (mess.startsWith(prefix + 'pause')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`').then(() => {
             dispatcher.pause();
         });
     }
-    else if (mess.startsWith(prefix + '$ok')) {
+    else if (mess.startsWith(prefix + 'ok')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
             message.channel.send('`✔`').then(() => {
             dispatcher.resume();
