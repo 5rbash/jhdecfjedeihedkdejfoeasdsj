@@ -326,13 +326,13 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.channel.type === "dm") return;
-      if(message.content.startsWith ("-^زواج")) {
+      if(message.content.startsWith ("$زواج")) {
       if(!message.channel.guild) return message.reply(' This command only for servers ')
       var proposed = message.mentions.members.first()
 
       if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
       if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
-       if(proposed === message.author) return message.reply(`**خنثى ؟ **`);
+       if(proposed === message.author) return message.reply(`**انثى ؟ **`);
         if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
               message.channel.send(`**${proposed} 
  بدك تقبلي عرض الزواج من ${message.author}
