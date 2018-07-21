@@ -440,7 +440,7 @@ client.on('message', function(message) {
             });
         }
     }
-    else if (mess.startsWith(prefix + '$skip')) {
+    else if (mess.startsWith(prefix + 'skip')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`').then(() => {
             skip_song(message);
@@ -448,7 +448,7 @@ client.on('message', function(message) {
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
         });
     }
-    else if (message.content.startsWith(prefix + '$vol')) {
+    else if (message.content.startsWith(prefix + 'vol')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         // console.log(args)
         if (args > 100) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
@@ -478,7 +478,7 @@ client.on('message', function(message) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.member.voiceChannel.join().then(message.channel.send(':ok:'));
     }
-    else if (mess.startsWith(prefix + '$play')) {
+    else if (mess.startsWith(prefix + 'play')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         if (isPlaying == false) return message.channel.send(':anger: || **__تم التوقيف__**');
         let playing_now_info = new Discord.RichEmbed()
@@ -618,5 +618,39 @@ For additional help,  `)
          message.channel.send({embed:embed});
                         }
                     });
+
+client.on('message', message => {
+    if(message.channel.type === "dm") return;
+      if(message.content.startsWith ("$زواج")) {
+      if(!message.channel.guild) return message.reply(' This command only for servers ')
+      var proposed = message.mentions.members.first()
+
+      if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
+      if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
+       if(proposed === message.author) return message.reply(`**انثى ؟ **`);
+        if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+              message.channel.send(`**${proposed} 
+ بدك تقبلي عرض الزواج من ${message.author}
+ العرض لمدة 10 ثانية 
+ اكتب موافقة او لا**`)
+
+const filter = m => m.content.startsWith("موافقة");
+message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+    message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
+})
+   .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
+
+   const filte = m => m.content.startsWith("لا");
+message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
+.then(collected =>{ 
+   message.channel.send(`**${message.author} تم رفض عرضك**`);
+})
+
+
+
+
+  }
+});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
