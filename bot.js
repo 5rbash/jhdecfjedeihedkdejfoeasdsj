@@ -332,7 +332,7 @@ client.on('message', message => {
     }
 });
 
-const Discord = require('discord.js');
+const discord = require('discord.js');
 const client = new Discord.Client();
 const ytdl = require('ytdl-core');
 const request = require('request');
