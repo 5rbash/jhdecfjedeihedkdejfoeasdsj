@@ -340,9 +340,9 @@ const fs = require('fs');
 const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
-const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
+const yt_api_key = "v2Dn_c7D5b1_9TIm7acO-0iKxdjeFgQI";
 const prefix = '+';
-const discord_token = "توكين البوت";
+const discord_token = "NDY4OTc4NTUxNzEwODEwMTEy.DjS78A.RGZVOJzakCQAubWPFiu2_KNj-Yw";
 client.login(discord_token);
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
