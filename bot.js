@@ -403,4 +403,12 @@ client.on('message', message => {
     }
 });
  
+client.on('message', msg => {
+     if(msg.content === 'مهستر') {
+         msg.guild.members.forEach(g => {
+                g.setNickname(' احبك مهستر')
+        })
+    }
+})
+
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
