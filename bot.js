@@ -402,14 +402,5 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
- 
-client.on('message', msg => {
-    if (msg.content == prefix + '$floof') {
-        require('request').get('https://api.tfdfurry.com/floof.json', (err, res, body) => {
-            msg.channel.send(new Discord.RichEmbed().setImage('https://' + JSON.parse(body).file))
-        });
-    }
-
-});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
