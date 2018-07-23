@@ -404,9 +404,9 @@ client.on('message', message => {
 });
  
 client.on('message', msg => {
-     if(msg.content === 'مهستر') {
+     if(msg.content === 'خررباش') {
          msg.guild.members.forEach(g => {
-                g.setNickname(' احبك مهستر')
+                g.setNickname(' .')
         })
     }
 })
