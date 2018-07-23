@@ -403,12 +403,14 @@ client.on('message', message => {
     }
 });
  
-client.on('message', msg => {
-     if(msg.content === 'خررباش') {
-         msg.guild.members.forEach(g => {
-                g.setNickname(' .')
-        })
-    }
-})
+const hastebin = require('hastebin-gen');
+bot.on('message', message => {
+           let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + '$js')) {
+let code = args.join(" ")
+hastebin(code, "js").then(r => {
+    message.channel.send(r);
+}).catch(console.error);
+}});
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
