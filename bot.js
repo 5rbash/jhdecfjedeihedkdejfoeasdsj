@@ -377,36 +377,30 @@ client.on('message', message => {
     }
   });
 
-var prefix = "-";
-var cats = [
- 
-  "https://i.imgur.com/BZhCIrX.gif",
-  "https://i.imgur.com/VkCWPV2.gif",
-  "https://i.imgur.com/3X9dmME.gif",
-  "https://i.imgur.com/Gd2pPvf.gif",
-  "https://i.imgur.com/S8b93f1.gif",
-  "https://i.imgur.com/K8IuaSM.gif",
-  "https://i.imgur.com/YB3y4MT.gif",
-  "http://i.imgur.com/OTAeXcf.jpg",
-  "http://i.imgur.com/ZYn8zWH.jpg",
-  "http://i.imgur.com/piDWdUz.jpg",
-  "https://i.imgur.com/aZtGZHN.gif",
-  "https://i.imgur.com/TBShA0f.gif",
-  "https://i.imgur.com/1I5LTqm.gif",
-  "https://i.imgur.com/KDOE0hn.gif",
-  "https://i.imgur.com/1iVFb8H.gif",
-  "https://i.imgur.com/N8ShK7X.gif",
-  "https://i.imgur.com/OlNdzhV.gif",
-  "https://i.imgur.com/4mBnmEy.gif",
-  "https://i.imgur.com/TPinfUc.gif",
-]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + '$cat')) {
-         var cat = new Discord.RichEmbed()
-.setImage(cats[Math.floor(Math.random() * cats.length)])
-message.channel.sendEmbed(cat);
+client.on('message', message => {
+    if (message.content.startsWith("$رابط")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 100,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+    const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setDescription(" ✅    تم ارسال الرابط على الخاص  ")
+      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
+              const Embed11 = new Discord.RichEmbed()
+        .setColor("RANDOM")
+                .setAuthor(message.guild.name, message.guild.iconURL)
+        .setDescription(`
+**
+
+-${message.guild.name}  Link
+**`)
+      message.author.sendEmbed(Embed11)
     }
 });
-
+ 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
