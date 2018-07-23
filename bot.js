@@ -359,13 +359,22 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
 
 client.on('message', message => {
-            if (message.content.startsWith(prefix + "$الجديد")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **ولا شيء** ' ,' *مانضاف شيء اليوم** ')
-.setColor('#7d2dbe')
-  message.channel.sendEmbed(embed);
+    if(message.content == '$server') {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`
+**   📗  online:  **__${message.guild.members.filter(m=>m.presence.status == 'online').size}__
+ 
+**   📕  dnd:      **__${message.guild.members.filter(m=>m.presence.status == 'dnd').size}__
+ 
+**   📙  idle:     **__${message.guild.members.filter(m=>m.presence.status == 'idle').size} __  
+ 
+**   📓   offline:  **__${message.guild.members.filter(m=>m.presence.status == 'offline').size}__
+ 
+**   🔖   all: **__${message.guild.memberCount}__`)      
+ 
+         message.channel.send({embed});
+ 
     }
-});
+  });
 
 client.login("NDY4OTc4NTUxNzEwODEwMTEy.DjS7Nw.Itp-I6kvRuFC-ScM7h-ow0MFF28");
